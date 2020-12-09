@@ -21,13 +21,13 @@ class ViewController: UIViewController {
     @IBOutlet var purpleBox: UIView!
     
 //// Set up purple square
-//   let purpleSquare: UIView = {
-//     let purpleSquare = UIView()
-//    purpleSquare.backgroundColor = .purple
-//    purpleSquare.translatesAutoresizingMaskIntoConstraints = false
-//    return purpleSquare
-//   }()
-//
+   let purpleSquare: UIView = {
+     let purpleSquare = UIView()
+    purpleSquare.backgroundColor = .purple
+    purpleSquare.translatesAutoresizingMaskIntoConstraints = false
+    return purpleSquare
+   }()
+
 
 
     
@@ -66,113 +66,111 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = .white
     view.addSubview(mainView)
-//    view.addSubview(purpleSquare)
-//
-//    purpleSquare.leadingAnchor.constraint(equalToSystemSpacingAfter: mainView.leadingAnchor, multiplier: 40).isActive = true
-//    purpleSquare.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -15).isActive = true
-//    purpleSquare.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.1).isActive = true
-//    purpleSquare.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -30).isActive = true
+    view.addSubview(purpleSquare)
+
+    purpleSquare.leadingAnchor.constraint(equalToSystemSpacingAfter: mainView.leadingAnchor, multiplier: 40).isActive = true
+    purpleSquare.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -15).isActive = true
+    purpleSquare.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.1).isActive = true
+    purpleSquare.bottomAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -30).isActive = true
     
     setupLayout()
     
-    
-//    blueStack()
-//    RedOrangeSquare()
-
+    blueStack()
+    RedOrangeSquare()
 
   }
     
-//    func RedOrangeSquare(){
-//        let redSquare = UIView()
-//        redSquare.backgroundColor = .red
-//        redSquare.translatesAutoresizingMaskIntoConstraints = false
-//
-//        view.addSubview(redSquare)
-//        redSquare.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 30).isActive = true
-//        redSquare.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -8.0).isActive = true
-//        redSquare.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.1).isActive = true
-//        redSquare.widthAnchor.constraint(equalTo: mainView.widthAnchor, multiplier: 0.35).isActive = true
-//
-//
-//
-//
-//        let orangeSquare1 = UIView()
-//        orangeSquare1.backgroundColor = .orange
-//        orangeSquare1.translatesAutoresizingMaskIntoConstraints = false
-////        orangeSquare1.heightAnchor.constraint(equalTo: redSquare.heightAnchor, multiplier: 0.8).isActive = true
-////        orangeSquare1.widthAnchor.constraint(equalTo: redSquare.widthAnchor, multiplier: 0.3).isActive = true
-//
-//
-//
-//        let orangeSquare2 = UIView()
-//        orangeSquare2.backgroundColor = .orange
-//        orangeSquare2.translatesAutoresizingMaskIntoConstraints = false
-////        orangeSquare2.heightAnchor.constraint(equalTo: redSquare.heightAnchor, multiplier: 0.3).isActive = true
-////        orangeSquare2.widthAnchor.constraint(equalTo: redSquare.widthAnchor, multiplier: 0.3).isActive = true
-////        orangeSquare2.heightAnchor.constraint(equalToConstant: redSquare.frame.height * 0.8).isActive = true
-//
-//
-//        let orangeStack = UIStackView(arrangedSubviews: [orangeSquare1, orangeSquare2])
-//        orangeStack.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(orangeStack)
-//
-//        orangeStack.axis = .horizontal
-//        orangeStack.spacing = 2
-//        orangeStack.distribution = .fillEqually
-//
-//        orangeStack.topAnchor.constraint(equalTo: redSquare.topAnchor, constant: 3).isActive = true
-//        orangeStack.centerXAnchor.constraint(equalTo: redSquare.centerXAnchor).isActive = true
-//        orangeStack.centerYAnchor.constraint(equalTo: redSquare.centerYAnchor).isActive = true
-//
-//    }
-//
-//
-//    func blueStack(){
-//
-//        let blueSquare1 = UIView()
-//        blueSquare1.backgroundColor = .blue
-//        blueSquare1.translatesAutoresizingMaskIntoConstraints = false
-////        blueSquare1.heightAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
-//        blueSquare1.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
-//        blueSquare1.widthAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
-//
-//
-//
-//        let blueSquare2 = UIView()
-//        blueSquare2.backgroundColor = .blue
-//        blueSquare2.translatesAutoresizingMaskIntoConstraints = false
-////        blueSquare2.heightAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
-//        blueSquare2.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
-//        blueSquare2.widthAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
-//
-//
-//
-//
-//        let blueSquare3 = UIView()
-//        blueSquare3.backgroundColor = .blue
-//        blueSquare3.translatesAutoresizingMaskIntoConstraints = false
-////        blueSquare3.heightAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
-//        blueSquare3.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
-//        blueSquare3.widthAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
-//
-//
-//        let blueStack = UIStackView(arrangedSubviews: [blueSquare1, blueSquare2,blueSquare3])
-//        blueStack.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(blueStack)
-//        blueStack.axis = .vertical
-//        blueStack.alignment = .center
-//        blueStack.distribution = .fillEqually
-//        blueStack.spacing = 30
-//
-//        blueStack.topAnchor.constraint(equalToSystemSpacingBelow: mainView.topAnchor, multiplier: 20.0).isActive = true
-////        blueStack.bottomAnchor.constraint(equalToSystemSpacingBelow: mainView.bottomAnchor, multiplier: -50).isActive = true
-//
-////        blueStack.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.3).isActive = true
-////        blueStack.widthAnchor.constraint(equalTo: mainView.widthAnchor, multiplier: 0.3).isActive = true
-//        blueStack.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-//        blueStack.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
-//
-//    }
+    func RedOrangeSquare(){
+        let redSquare = UIView()
+        redSquare.backgroundColor = .red
+        redSquare.translatesAutoresizingMaskIntoConstraints = false
+
+        view.addSubview(redSquare)
+        redSquare.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 30).isActive = true
+        redSquare.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -8.0).isActive = true
+        redSquare.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.1).isActive = true
+        redSquare.widthAnchor.constraint(equalTo: mainView.widthAnchor, multiplier: 0.35).isActive = true
+
+
+
+
+        let orangeSquare1 = UIView()
+        orangeSquare1.backgroundColor = .orange
+        orangeSquare1.translatesAutoresizingMaskIntoConstraints = false
+//        orangeSquare1.heightAnchor.constraint(equalTo: redSquare.heightAnchor, multiplier: 0.8).isActive = true
+//        orangeSquare1.widthAnchor.constraint(equalTo: redSquare.widthAnchor, multiplier: 0.3).isActive = true
+
+
+
+        let orangeSquare2 = UIView()
+        orangeSquare2.backgroundColor = .orange
+        orangeSquare2.translatesAutoresizingMaskIntoConstraints = false
+//        orangeSquare2.heightAnchor.constraint(equalTo: redSquare.heightAnchor, multiplier: 0.3).isActive = true
+//        orangeSquare2.widthAnchor.constraint(equalTo: redSquare.widthAnchor, multiplier: 0.3).isActive = true
+//        orangeSquare2.heightAnchor.constraint(equalToConstant: redSquare.frame.height * 0.8).isActive = true
+
+
+        let orangeStack = UIStackView(arrangedSubviews: [orangeSquare1, orangeSquare2])
+        orangeStack.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(orangeStack)
+
+        orangeStack.axis = .horizontal
+        orangeStack.spacing = 2
+        orangeStack.distribution = .fillEqually
+
+        orangeStack.topAnchor.constraint(equalTo: redSquare.topAnchor, constant: 3).isActive = true
+        orangeStack.centerXAnchor.constraint(equalTo: redSquare.centerXAnchor).isActive = true
+        orangeStack.centerYAnchor.constraint(equalTo: redSquare.centerYAnchor).isActive = true
+
+    }
+
+
+    func blueStack(){
+
+        let blueSquare1 = UIView()
+        blueSquare1.backgroundColor = .blue
+        blueSquare1.translatesAutoresizingMaskIntoConstraints = false
+//        blueSquare1.heightAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
+        blueSquare1.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
+        blueSquare1.widthAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
+
+
+
+        let blueSquare2 = UIView()
+        blueSquare2.backgroundColor = .blue
+        blueSquare2.translatesAutoresizingMaskIntoConstraints = false
+//        blueSquare2.heightAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
+        blueSquare2.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
+        blueSquare2.widthAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
+
+
+
+
+        let blueSquare3 = UIView()
+        blueSquare3.backgroundColor = .blue
+        blueSquare3.translatesAutoresizingMaskIntoConstraints = false
+//        blueSquare3.heightAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
+        blueSquare3.heightAnchor.constraint(equalToConstant: 5.0).isActive = true
+        blueSquare3.widthAnchor.constraint(equalToConstant: self.view.frame.width/10).isActive = true
+
+
+        let blueStack = UIStackView(arrangedSubviews: [blueSquare1, blueSquare2,blueSquare3])
+        blueStack.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(blueStack)
+        blueStack.axis = .vertical
+        blueStack.alignment = .center
+        blueStack.distribution = .fillEqually
+        blueStack.spacing = 30
+
+        blueStack.topAnchor.constraint(equalToSystemSpacingBelow: mainView.topAnchor, multiplier: 20.0).isActive = true
+//        blueStack.bottomAnchor.constraint(equalToSystemSpacingBelow: mainView.bottomAnchor, multiplier: -50).isActive = true
+
+//        blueStack.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.3).isActive = true
+//        blueStack.widthAnchor.constraint(equalTo: mainView.widthAnchor, multiplier: 0.3).isActive = true
+        blueStack.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        blueStack.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+
+    }
     
     
     
